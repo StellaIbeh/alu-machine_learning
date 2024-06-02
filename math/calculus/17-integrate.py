@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
-"""Derivative of a polynomial""'
+'''
+    The function below calculates
+    the integral of a polynomial
+'''
+
+
 def poly_integral(poly, C=0):
-    """Calculates the integral of a polynomial"""
-    integral = []
-    # check for the validity of the inputs
-    if not isinstance(poly, list) or len(poly) == 0 or not isinstance(C, int):
+    """
+    calculates the integral of the given polynomial
+    """
+    if type(poly) is not list or len(poly) < 1:
         return None
-    # calculate the cofficients
-    for i in range(len(poly)-1, 0, -1):
-        integral.append(poly[i]/(i+1))
-
-    integral.append(poly[0])
-    integral.append(C)
-    # fit the output like on the intranet
-    if len(poly) == 1 and poly[0] == 0:
-        integral = [C]
-    for i in range(len(integral)):
-        if integral[i] % 1 == 0:
-            integral[i] = int(integral[i])
-
-    return integral[::-1]
+    if type(C) is not int and type(C) is not float:
+        return None
+    for coefficient in poly:
+        if type(coefficient) is not int and type(coefficient) is not float:
+            return None
+    if type(C) is float and C.is_integer():
+        C = int(C)
+    integral = [C]
+    for power, coefficient in enumerate(poly):
+        if (coefficient % (power + 1)) is 0:
+            new_coefficient = coefficient // (power + 1)
+        else:
+            new_coefficient = coefficient / (power + 1)
+        integral.append(new_coefficient)
+    while integral[-1] is 0 and len(integral) > 1:
+        integral = integral[:-1]
+    return integral
