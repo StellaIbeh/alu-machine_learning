@@ -1,6 +1,8 @@
-
 #!/usr/bin/env python3
-"""Poisson distribution"""
+
+"""
+  Poisson distribution
+"""
 
 
 class Poisson:
@@ -49,7 +51,7 @@ class Poisson:
 
         Args:
             k (int): is the number of successes.
-        """
+        ""
 
         if not isinstance(k, int):
             k = int(k)
