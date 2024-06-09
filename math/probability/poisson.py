@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-  Poisson distribution
-"""
+"""Poisson distribution"""
 
 
 class Poisson:
@@ -51,7 +49,7 @@ class Poisson:
 
         Args:
             k (int): is the number of successes.
-        ""
+        """
 
         if not isinstance(k, int):
             k = int(k)
@@ -64,4 +62,3 @@ class Poisson:
                                        self.lambtha) / self.factorial(k)
             return p
         return sum([p(k) for k in range(0, k+1)])
-
