@@ -1,1 +1,1 @@
-Multivariate Probability
+Multivariate_probability
