@@ -1,6 +1,8 @@
 
 #!/usr/bin/env python3
-"""Bayesian Probability Intersection"""
+"""
+Bayesian Probability Intersection
+"""
 import numpy as np
 
 
