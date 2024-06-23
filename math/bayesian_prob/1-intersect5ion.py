@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 """
@@ -133,4 +132,3 @@ if __name__ == '__main__':
     P = np.linspace(0, 1, 21)  # [0.0, 0.05, 0.1, ..., 1.0]
     Pr = np.ones(21) / 21
     print(intersection(55, 100, P, Pr).round(12))
-
