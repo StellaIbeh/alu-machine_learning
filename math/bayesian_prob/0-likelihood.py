@@ -1,6 +1,9 @@
 
 #!/usr/bin/env python3
-"""Bayesian Probability"""
+
+"""
+Bayesian Probability
+"""
 
 
 import numpy as np
