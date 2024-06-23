@@ -1,6 +1,5 @@
-
 #!/usr/bin/env python3
-"""Bayesian Posterior Probability"""
+"""Bayesian Marginal Probability"""
 
 import numpy as np
 
@@ -48,11 +47,10 @@ def intersection(x, n, P, Pr):
     return intersection_values
 
 
-def posterior(x, n, P, Pr):
-    """Calculate the posterior probability for each probability in P"""
+def marginal(x, n, P, Pr):
+    """Calculate the marginal probability by summing the intersection values"""
     intersection_values = intersection(x, n, P, Pr)
     marginal_prob = np.sum(intersection_values)
-    posterior_prob = intersection_values / marginal_prob
 
-    return posterior_prob
+    return marginal_prob
 
