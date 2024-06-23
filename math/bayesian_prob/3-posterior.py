@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """ Implements the likelihood method
 """
@@ -128,4 +127,3 @@ def __fact(n):
         return 1
     else:
         return n * __fact(n - 1)
-
