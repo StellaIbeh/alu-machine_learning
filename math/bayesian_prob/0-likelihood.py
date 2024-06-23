@@ -1,8 +1,6 @@
-
 #!/usr/bin/env python3
-
 """
-Bayesian Probability
+   Bayesian Probability
 """
 
 
