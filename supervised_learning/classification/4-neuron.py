@@ -79,3 +79,16 @@ class Neuron:
         cost = -(1 / m) * np.sum(Y * np.log(A) +
                                  (1 - Y) * np.log(1.0000001 - A))
         return cost
+
+    def evaluate(self, X, Y):
+        """evaluating neuron's predictions
+        X - np.ndarray of shape (nx, m) contains input data
+        Y - np.ndarray of shape (1, m) contains correct labels for input data
+        """
+
+        A = self.forward_prop(X)
+        cost = self.cost(Y, A)
+        predictions = (A >= 0.5).astype(int)
+        accuracy = np.mean(predictions == Y)
+        return predictions, cost
+
