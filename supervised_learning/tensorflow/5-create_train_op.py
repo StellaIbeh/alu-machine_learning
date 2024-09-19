@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 '''Train the OP'''
 
@@ -23,4 +22,3 @@ def create_train_op(loss, alpha):
     train_op = optimizer.minimize(loss)
 
     return train_op
-
