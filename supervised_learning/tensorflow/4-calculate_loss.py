@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 '''calculate the Loss'''
 
@@ -20,4 +19,3 @@ def calculate_loss(y, y_pred):
     loss = tf.losses.softmax_cross_entropy(
         onehot_labels=y, logits=y_pred)
     return loss
-
