@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 '''Accuracy'''
 import tensorflow as tf
@@ -21,4 +20,3 @@ def calculate_accuracy(y, y_pred):
     accuracy = tf.reduce_mean(tf.cast
                               (correct_predictions, tf.float32))
     return accuracy
-
