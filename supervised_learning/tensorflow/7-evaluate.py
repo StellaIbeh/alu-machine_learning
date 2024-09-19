@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Defines a function that evaluates output of
@@ -33,4 +32,3 @@ def evaluate(X, Y, save_path):
         accuracy = sess.run(accuracy, feed_dict={x: X, y: Y})
         loss = sess.run(loss, feed_dict={x: X, y: Y})
     return (prediction, accuracy, loss)
-
