@@ -269,3 +269,4 @@ class NST:
                 self.layer_style_cost(style_outputs[i],
                                       self.gram_style_features[i]) * weight)
         return style_cost
+    

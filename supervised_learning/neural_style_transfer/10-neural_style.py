@@ -399,4 +399,5 @@ class NST:
         returns:
             the variational cost
         """
+        
         return None
