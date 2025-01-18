@@ -83,6 +83,3 @@ class GRUCell:
         y = self.softmax(np.matmul(h_next, self.Wy) + self.by)
 
         return h_next, y
-
-    
-    
