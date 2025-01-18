@@ -2,11 +2,15 @@
 """
 Script that defines a class BidirectionalCell
 """
+
 import numpy as np
+
+
 class BidirectionalCell:
     """
     Class that represents a bidirectional cell of an RNN
     """
+
     def __init__(self, i, h, o):
         """
         Class constructor
@@ -17,6 +21,7 @@ class BidirectionalCell:
         self.Whf = np.random.normal(size=(h + i, h))
         self.Whb = np.random.normal(size=(h + i, h))
         self.Wy = np.random.normal(size=((2 * h), o))
+
     def forward(self, h_prev, x_t):
         """
         Function that performs forward propagation
@@ -24,6 +29,7 @@ class BidirectionalCell:
         h_x = np.concatenate((h_prev, x_t), axis=1)
         h_next = np.tanh(np.matmul(h_x, self.Whf) + self.bhf)
         return h_next
+
     def backward(self, h_next, x_t):
         """
         Function that performs backward propagation
