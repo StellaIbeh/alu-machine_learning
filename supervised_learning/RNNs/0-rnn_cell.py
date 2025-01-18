@@ -12,7 +12,7 @@ class RNNCell:
         """class constructor
         i - data dimensionality
         h - hidden state dimensionality
-        0 - outputs dimensionality
+        o - outputs dimensionality
         wh, bh - weights
         bh, by - biases
         wy, by - output
