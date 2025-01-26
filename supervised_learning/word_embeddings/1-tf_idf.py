@@ -32,4 +32,4 @@ def tf_idf(sentences, vocab=None):
     x = vectorizer.fit_transform(sentences)
     embeddings = x.toarray()
     features = vectorizer.get_feature_names()
-    return embeddings, features
+    return embeddings, feature
